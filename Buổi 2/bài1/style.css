@@ -1,0 +1,117 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.resume {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+header {
+    margin-bottom: 20px;
+}
+
+.contact-info {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px solid #333;
+    padding-bottom: 10px;
+}
+
+.name-title {
+    text-align: left;
+}
+
+header h1 {
+    margin: 0;
+    color: #000000;
+    font-size: 2.5em;
+}
+
+header h2 {
+    margin: 0;
+    font-size: 1.5em;
+    color: #666;
+}
+
+.contact-details {
+    text-align: right;
+}
+
+.contact-details p {
+    margin: 5px 0;
+    font-size: 0.9em;
+    color: #666;
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+h3 {
+    font-size: 1.3em;
+    border-bottom: 2px solid #333;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    color: #333;
+}
+
+.job {
+    margin-bottom: 20px;
+}
+
+.job-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.job-header h4 {
+    margin: 0;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.job p {
+    margin: 5px 0;
+    color: #666;
+    font-style: italic;
+}
+
+.date {
+    font-size: 0.9em;
+    font-style: italic;
+    color: #666;
+}
+
+.skills, .languages {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.skills td, .languages td {
+    padding: 5px;
+    border-bottom: 1px solid #ddd;
+}
+
+.skills tr:nth-child(even), .languages tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.skills tr:hover, .languages tr:hover {
+    background-color: #f1f1f1;
+}
+
+h1{
+    text-align: center;
+    color: green;
+}
