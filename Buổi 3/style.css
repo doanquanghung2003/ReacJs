@@ -1,0 +1,63 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.resume {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+header {
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.photo {
+    flex: 1;
+}
+
+.photo img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+}
+
+.personal-info {
+    flex: 3;
+    text-align: right;
+}
+
+.personal-info h1 {
+    margin: 0;
+}
+
+h2 {
+    background: #ddd;
+    padding: 5px;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
+section {
+    margin-bottom: 20px;
+}
