@@ -1,0 +1,76 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #f5f5f5;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+}
+
+.header-content {
+    max-width: 800px;
+    margin: 0 auto;
+    color: white;
+    position: relative;
+    z-index: 2;
+}
+
+.header-content::before {
+    content: "";
+    background-image: url('images/header-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.5;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: 1;
+}
+
+.search-bar {
+    margin-top: 20px;
+}
+
+.search-bar input {
+    width: 80%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.browse-category, .latest-recipes, .browse-diet {
+    padding: 20px;
+    text-align: center;
+}
+
+.categories, .recipes, .diets {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.category, .recipe, .diet {
+    margin: 10px;
+    text-align: center;
+}
+
+.category img, .recipe img, .diet img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.category span, .recipe span, .diet span {
+    display: block;
+    margin-top: 10px;
+    font-size: 16px;
+    color: #333;
+}
