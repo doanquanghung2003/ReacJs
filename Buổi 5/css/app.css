@@ -1,0 +1,21 @@
+h1{
+   color: rgb(255, 0, 0);
+}
+p {
+    color: #008000;  
+    font-size: 16px;
+    font-family: 'Times New Roman';
+    font-weight: 400;/* thin-100 light-300 normal-400 medium-500 semi-bold 600 bold 700 extra-bold black */
+    text-align: justify;/* left center right justify*/
+    text-decoration: none; /* underline line-through overline none*/
+    text-transform: none;/* uppercase lowercase capitalize none*/
+    line-height: 1.5;
+    width: 600px;
+    border-bottom: 1px solid red;
+    float: left;
+    /* left right */
+    padding: 15px;
+}
+body{
+    background-color: #ffe4c4;
+}
