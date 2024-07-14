@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function getRandomInt(min, max) {
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+
+        var systemNumbers = [];
+        while (systemNumbers.length < 6) {
+            var randomNumber = getRandomInt(0, 55);
+            if (!systemNumbers.includes(randomNumber)) {
+                systemNumbers.push(randomNumber);
+            }
+        }
+
+        document.write("<h2>Bộ số ngẫu nhiên của hệ thống:</h2>");
+        document.write("<ul>");
+        for (var i = 0; i < systemNumbers.length; i++) {
+            document.write("<li>" + systemNumbers[i] + "</li>");
+        }
+        document.write("</ul>");
+
+        var playerNumbers = [];
+        for (var z = 0; z < 6; z++) {
+            var value;
+            do {
+                value = parseInt(prompt("Nhập số mong muốn " + (z + 1) + " (không được lặp lại từ 0 đến 55):"));
+            } while (playerNumbers.includes(value) || value < 0 || value > 55);
+            playerNumbers.push(value);
+        }
+
+        document.write("<h2>Các số người chơi đã chọn:</h2>");
+        document.write("<ul>");
+        for (var i = 0; i < playerNumbers.length; i++) {
+            document.write("<li>" + playerNumbers[i] + "</li>");
+        }
+        document.write("</ul>");
+
+        var trúngThưởng = playerNumbers.filter(value => systemNumbers.includes(value));
+        
+        document.write("<h2>Các số trúng thưởng:</h2>");
+        if (trúngThưởng.length > 0) {
+            document.write("<ul>");
+            for (var i = 0; i < trúngThưởng.length; i++) {
+                document.write("<li>" + trúngThưởng[i] + "</li>");
+            }
+            document.write("</ul>");
+        } else {
+            document.write("<p>Không có số nào trúng thưởng</p>");
+        }
+    </script>
+</body>
+</html>
