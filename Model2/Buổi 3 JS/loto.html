@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function getRandomInt(min, max) {
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+
+        var arr = [];
+        var number = [];
+        var sum = 0;
+        var n = parseInt(prompt("Nhập số lượng phần tử trong mảng:"));
+        
+
+        for (var z = 0; z < 5; z++) {
+            var value;
+            do {
+                value = parseInt(prompt("Nhập số mong muốn " + (z + 1) + " (không được lặp lại):"));
+            } while (number.includes(value));
+            number.push(value);
+        }
+
+        var money = parseInt(prompt("Nhập số tiền đặt cược :"));
+
+        for (var i = 0; i < n; i++) {
+            var randomNumber = getRandomInt(1, 100);
+            arr.push(randomNumber);
+            document.write("Các số trong mảng : " + arr[i] + "</br>");
+
+            for (var y = 0; y < number.length; y++) {
+                if (number[y] === arr[i]) {
+                    sum += money * 23000;
+                    document.write("Số " + arr[i] + " trúng thưởng!");
+                }
+            }
+
+        } 
+        document.write("Tiền sau khi trúng số : " + sum);
+
+        
+    </script>
+</body>
+</html>

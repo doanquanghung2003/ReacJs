@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Tính chu vi và diện tích hình tam giác</h1>
+    <script>
+        var hoanthanh = false;
+        while(hoanthanh != true){
+            var canh1 = prompt("Nhap canh 1")
+            canh1 = parseFloat(canh1);
+            var canh2 = prompt("Nhap canh 2")
+            canh2 = parseFloat(canh2);
+            var canh3 = prompt("Nhap canh 3")
+            canh3 = parseFloat(canh3);
+
+            if(canh1 + canh2 > canh3 && canh2+canh3 > canh1){
+                var p = canh1 + canh2 + canh3;
+                alert('chu vi : ${p}');
+                var s = Math.sqrt(p2 * (p2 - canh1) * (p2 - canh2) * (p2 - canh3));
+                alert('dien tich : ${s}');
+                hoanthanh = true;
+            }else{
+                alert("Đây kp là độ dài hình tam giác");
+                var check = confirm("b muốn lặp lại k")
+                if(check = true){
+                    hoanthanh = false;
+                }else{
+                    hoanthanh=true;
+                }
+            }   
+            alert("kết thúc")  
+            
+        }
+    </script>
+</body>
+</html>

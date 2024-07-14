@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var arr1 = [];
+        var n = parseInt(prompt("Nhập số lượng phần tử trong mảng:"));
+
+        for (var i = 0; i < n; i++) {
+            var value = parseFloat(prompt("Nhập giá trị phần tử thứ " + (i + 1) + ":"));
+            arr1.push(value);
+        }
+
+        var sum = 0;
+        var max = arr1[0];
+        var min = arr1[0];
+
+        for (var i = 0; i < arr1.length; i++) {
+            sum += arr1[i];
+            if (arr1[i] > max) {
+                max = arr1[i];
+            }
+            if (arr1[i] < min) {
+                min = arr1[i];
+            }
+        }
+
+        document.write("Mảng: " + arr1.join(", ") + "<br>");
+        document.write("Tổng: " + sum + "<br>");
+        document.write("Giá trị lớn nhất: " + max + "<br>");
+        document.write("Giá trị nhỏ nhất: " + min + "<br>");
+        document.write("Trung bình cộng: " + (sum / arr1.length).toFixed(1) + "<br>");
+
+    </script>
+</body>
+</html>
