@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>function</h1>
+    <script type="text/javascript" src="Model2/js/demo.js">
+        function songuyento(n){
+            if (n <= 1) 
+            return false;
+
+            for (let i = 2; i <= Math.sqrt(n); i++) {
+                if (n % i === 0) 
+                return false;
+            }
+            return true;
+        }
+
+        var n = parseInt(prompt("Nhập số cần kiểm tra :"));
+        if (songuyento(n)) {
+            document.write("Số " + n + " là số nguyên tố.");
+        } else {
+            document.write("Số " + n + " không phải là số nguyên tố.");
+        }
+
+
+
+        function chuViTamGiac(a, b, c) {
+            return a + b + c;
+        }
+
+        function dienTichTamGiac(a, b, c) {
+            var p = (a + b + c) / 2;
+            return Math.sqrt(p * (p - a) * (p - b) * (p - c));
+        }
+
+        var a = parseFloat(prompt("Nhập độ dài cạnh a của tam giác:"));
+        var b = parseFloat(prompt("Nhập độ dài cạnh b của tam giác:"));
+        var c = parseFloat(prompt("Nhập độ dài cạnh c của tam giác:"));
+
+        if (a + b > c && a + c > b && b + c > a) {
+            var chuVi = chuViTamGiac(a, b, c);
+            var dienTich = dienTichTamGiac(a, b, c);
+
+            document.write("Chu vi của tam giác là: " + chuVi + "<br>");
+            document.write("Diện tích của tam giác là: " + dienTich);
+        } else {
+            document.write("Ba cạnh không thể tạo thành một tam giác.");
+        }
+        
+    </script>
+</body>
+</html>
