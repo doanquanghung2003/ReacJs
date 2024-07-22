@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/Model2/css/style.css">
+</head>
+<body>
+
+    <div id="fan"></div>
+    <button id="offButton" class="button" onclick="setSpeed(0, 'offButton')">OFF</button>
+    <button id="speed1Button" class="button" onclick="setSpeed(5, 'speed1Button')">1</button>
+    <button id="speed2Button" class="button" onclick="setSpeed(25, 'speed2Button')">2</button>
+    <button id="speed3Button" class="button" onclick="setSpeed(50, 'speed3Button')">3</button>
+    <script>
+        var speed = 0;
+        var rotation = 0;
+        var f = setInterval(function() {
+            var fan = document.getElementById("fan");
+            fan.style.transform = `rotate(${rotation}deg)`;
+            rotation = (rotation + speed) % 360;
+        }, 10);
+
+        function setSpeed(newSpeed, buttonId) {
+            speed = newSpeed;
+            var buttons = document.getElementsByClassName("button");
+            for (var i = 0; i < buttons.length; i++) {
+                buttons[i].style.backgroundColor = "";
+            }
+            var button = document.getElementById(buttonId);
+            if (buttonId === 'offButton') {
+                button.style.backgroundColor = "red";
+            } else if (buttonId === 'speed1Button') {
+                button.style.backgroundColor = "green";
+            } else if (buttonId === 'speed2Button') {
+                button.style.backgroundColor = "yellow";
+            } else if (buttonId === 'speed3Button') {
+                button.style.backgroundColor = "blue";
+            }
+        }
+    </script>
+
+</body>
+</html>

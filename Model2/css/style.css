@@ -1,0 +1,16 @@
+#fan{
+    margin: 50px auto;
+    width: 450px;
+    height: 450px;
+    /* background-color: red; */
+    transition: transform 300ms;
+    background-image: url("/Model2/image/canh-quat.png");
+    background-size: 450px;
+    background-repeat: no-repeat;
+}
+
+.button {
+    padding: 10px 20px;
+    margin: 5px;
+    font-size: 16px;
+}
