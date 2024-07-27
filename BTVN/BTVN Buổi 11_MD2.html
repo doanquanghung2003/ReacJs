@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Đăng nhập</title>
+    <link rel="stylesheet" href="/Model2/css/login.css">
+</head>
+<body>
+    <div class="login-form">
+        <h2>Đăng nhập</h2>
+        <input type="text" id="email" placeholder="Email">
+        <input type="password" id="password" placeholder="Mật khẩu">
+        <button onclick="validateForm()">Đăng nhập</button>
+        <p class="text-danger" id="warning">Vui lòng nhập email hợp lệ và mật khẩu tối thiểu 6 ký tự.</p>
+    </div>
+
+    <script>
+        function validateForm() {
+            var email = document.getElementById("email").value;
+            var password = document.getElementById("password").value;
+            var warning = document.getElementById("warning");
+            var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+            if (!emailPattern.test(email) || password.length < 6) {
+                warning.style.display = "block";
+                alert("Đăng nhập không thành công!");
+            } else {
+                warning.style.display = "none";
+                alert("Đăng nhập thành công!");
+            }
+        }
+    </script>
+</body>
+</html>
