@@ -5,6 +5,7 @@
 .menu .items{
     float: left;
     margin-right: 25px;
+    position: relative;
 }
 
 .menu .items a{

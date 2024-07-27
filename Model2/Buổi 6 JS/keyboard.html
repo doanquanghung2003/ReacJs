@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .text-danger {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>keyboard</h1>
+    <input type="text" placeholder="Enter..." 
+    id="ipx"
+    onkeydown="enterKeyDown(this)" 
+    onkeyup="enterKeyUp(event, this)"
+    />
+    <select name="country" onchange="selectChange(this)">
+        <option value="VN">VN</option>
+        <option value="US">US</option>
+        <option value="UK">UK</option>
+    </select>
+    <p class="text-danger" id="warning" style="display:none">Vui lòng nhập lại.</p>
+    <script>
+        function enterKeyDown(){
+            var ipx = document.getElementById("ipx");
+            var v = ipx.value;
+            console.log(`Key down... :${v}`);
+        }
+
+        function enterKeyUp(event){
+            var ipx = document.getElementById("ipx");
+            var v = ipx.value;
+            console.log(`Key up...:${v}`);
+
+            var warning = document.getElementById("warning");
+            if(event.keyCode == 13 && v.length < 6){
+                warning.style.display = "block";
+            } else {
+                warning.style.display = "none";
+            }
+        }
+
+        function selectChange(e){
+            var v = e.value;
+            console.log(v);
+        }
+    </script>
+</body>
+</html>

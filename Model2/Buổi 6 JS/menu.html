@@ -21,7 +21,7 @@
                     <a href="#">Home</a>
                 </li>
 
-                <li class="items">
+                <li class="items" onmouseleave="hideSubmenu()" onmouseenter="openSubmenu(this)">
                     <a href="#">Bóng Đá</a>
                     <ul class="submenu">
                         <li><a href="#">Bóng đá Anh</a></li>
@@ -30,7 +30,7 @@
                     </ul>
                 </li>
 
-                <li class="items">
+                <li class="items" onmouseleave="hideSubmenu()" onmouseenter="openSubmenu(this)">
                     <a href="#">Tài Chính</a>
                     <ul class="submenu">
                         <li><a href="#">Chứng Khoán</a></li>
@@ -41,5 +41,21 @@
             </ul>
         </div>
      </nav>
+
+     <script type="text/javascript">
+        function openSubmenu(e){
+            hideSubmenu();
+            var sub = e.lastElementChild;
+            sub.style.display = "block";
+            
+
+        }
+        function hideSubmenu(){
+            var subs = document.getElementsByClassName("submenu");
+            for(var s of subs){
+                s.style.display = "none";
+            }
+        }
+     </script>
 </body>
 </html>
