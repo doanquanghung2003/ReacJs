@@ -24,17 +24,37 @@ export const sortMenu = [
 export const brandsMenu = [
     {
         id: 1,
-        label: "Lacoste",
+        label: "Iphone",
         checked: false,
     },
     {
         id: 2,
-        label: "Dior",
+        label: "Samsung",
         checked: false,
     },
     {
         id: 3,
-        label: "Adias",
+        label: "Xiaomi",
+        checked: false,
+    },
+    {
+        id: 4,
+        label: "Infinix",
+        checked: false,
+    },
+    {
+        id: 5,
+        label: "Oppo",
+        checked: false,
+    },
+    {
+        id: 6,
+        label: "Tecno",
+        checked: false,
+    },
+    {
+        id: 7,
+        label: "OnePlus",
         checked: false,
     },
 ];
@@ -42,12 +62,12 @@ export const brandsMenu = [
 export const categoryMenu = [
     {
         id: 1,
-        label: "Shirt",
+        label: "Cao cấp",
         checked: false,
     },
     {
         id: 2,
-        label: "T-shirt",
+        label: "tầm trung",
         checked: false,
     },
     {
