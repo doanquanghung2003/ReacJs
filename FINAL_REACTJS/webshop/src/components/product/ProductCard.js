@@ -29,6 +29,8 @@ const ProductCard = (props) => {
     const newPrice = displayMoney(finalPrice);
     const oldPrice = displayMoney(originalPrice);
 
+    const shortDescription = info.substring(0, 100) + '...';
+
 
     return (
         <>
@@ -47,7 +49,7 @@ const ProductCard = (props) => {
                     <h3 className="products_title">
                         <Link to={`${path}${id}`}>{title}</Link>
                     </h3>
-                    <h5 className="products_info">{info}</h5>
+                    <h5 className="products_info">{shortDescription}</h5>
                     <div className="separator"></div>
                     <h2 className="products_price">
                         {newPrice} &nbsp;
